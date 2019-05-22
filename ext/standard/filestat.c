@@ -777,7 +777,8 @@ PHPAPI void php_stat(const char *filename, size_t filename_length, int type, zva
 		RETURN_FALSE;
 	}
 
-	if ((wrapper = php_stream_locate_url_wrapper(filename, &local, 0)) == &php_plain_files_wrapper && php_check_open_basedir(local)) {
+	wrapper = php_stream_locate_url_wrapper(filename, &local, 0);
+	if (wrapper == &php_plain_files_wrapper && php_check_open_basedir(local)) {
 		RETURN_FALSE;
 	}
 

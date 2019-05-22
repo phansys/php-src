@@ -18,6 +18,10 @@ PHP                                                                        NEWS
   . Fixed bug #78038 (Socket_select fails when resource array contains
     references). (Nikita)
 
+- Standard:
+  . Fixed bug #78042 (Incorrect readable and writable flags for php:// streams)
+    (Konstantin Kuklin)
+
 30 May 2019, PHP 7.2.19
 
 - FPM:
